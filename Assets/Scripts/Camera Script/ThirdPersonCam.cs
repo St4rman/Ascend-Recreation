@@ -17,7 +17,8 @@ public class ThirdPersonCam : MonoBehaviour
     public enum viewMode
     {
         DefaultCam, 
-        AscendCam
+        AscendCam,
+        DebugCam
     }
 
     private viewMode currentViewMode;
@@ -43,6 +44,7 @@ public class ThirdPersonCam : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.R)) SwitchCamera(viewMode.DefaultCam);
         if(Input.GetKeyDown(KeyCode.Q)) SwitchCamera(viewMode.AscendCam);
+        if(Input.GetKeyDown(KeyCode.F1)) SwitchCamera(viewMode.DebugCam);
 
 
     }
@@ -54,6 +56,7 @@ public class ThirdPersonCam : MonoBehaviour
 
         if(currentMode == viewMode.DefaultCam) cams[0].SetActive(true);
         if(currentMode == viewMode.AscendCam) cams[1].SetActive(true);
+        if(currentMode == viewMode.DebugCam) cams[2].SetActive(true);
 
         currentViewMode = currentMode;
 
