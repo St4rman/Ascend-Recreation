@@ -15,7 +15,7 @@ public class movement : MonoBehaviour
     Rigidbody rb;
 
     private void Start(){
-        Debug.Log("movement script on");
+       
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
